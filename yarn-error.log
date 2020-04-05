@@ -1,0 +1,64 @@
+Arguments: 
+  /home/linuxbrew/.linuxbrew/Cellar/node/13.7.0/bin/node /home/linuxbrew/.linuxbrew/Cellar/yarn/1.21.1/libexec/bin/yarn.js add redux*
+
+PATH: 
+  /home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin/:/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin/:/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+
+Yarn version: 
+  1.21.1
+
+Node version: 
+  13.7.0
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/redux*: Not found
+      at Request.params.callback [as _callback] (/home/linuxbrew/.linuxbrew/Cellar/yarn/1.21.1/libexec/lib/cli.js:66947:18)
+      at Request.self.callback (/home/linuxbrew/.linuxbrew/Cellar/yarn/1.21.1/libexec/lib/cli.js:140665:22)
+      at Request.emit (events.js:321:20)
+      at Request.<anonymous> (/home/linuxbrew/.linuxbrew/Cellar/yarn/1.21.1/libexec/lib/cli.js:141637:10)
+      at Request.emit (events.js:321:20)
+      at IncomingMessage.<anonymous> (/home/linuxbrew/.linuxbrew/Cellar/yarn/1.21.1/libexec/lib/cli.js:141559:12)
+      at Object.onceWrapper (events.js:427:28)
+      at IncomingMessage.emit (events.js:333:22)
+      at endReadableNT (_stream_readable.js:1201:12)
+      at processTicksAndRejections (internal/process/task_queues.js:84:21)
+
+npm manifest: 
+  {
+    "name": "cashflow",
+    "version": "1.0.0",
+    "description": "Money management",
+    "main": "server.js",
+    "scripts": {
+      "test": "node server",
+      "server": "nodemon server",
+      "client": "npm start --prefix client",
+      "dev": "concurrently \"npm run server\" \"npm run client\""
+    },
+    "author": "Donastien Karoumbata",
+    "license": "MIT",
+    "dependencies": {
+      "bcryptjs": "^2.4.3",
+      "config": "^3.3.0",
+      "express": "^4.17.1",
+      "express-validator": "^6.4.0",
+      "gravatar": "^1.8.0",
+      "jsonwebtoken": "^8.5.1",
+      "mongoose": "^5.9.4",
+      "redux": "^4.0.5",
+      "request": "^2.88.2"
+    },
+    "devDependencies": {
+      "concurrently": "^5.1.0",
+      "nodemon": "^2.0.2"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
