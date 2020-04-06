@@ -11,12 +11,12 @@ const Dashboard = ({
   getMonths,
   getLoads,
   auth: { user },
-  month: { months, loading }
+  month: { months, loading },
 }) => {
   useEffect(() => {
-    getMonths();
     getLoads();
-  }, [getMonths, getLoads]);
+    getMonths();
+  }, [getLoads, getMonths]);
 
   return (
     <Fragment>
@@ -27,7 +27,7 @@ const Dashboard = ({
           <DashboardAction />
           <div>
             {months.length > 0 ? (
-              months.map(month => <MonthItem key={month._id} month={month} />)
+              months.map((month) => <MonthItem key={month._id} month={month} />)
             ) : (
               <h4 className='text-center text-light mt-4'>
                 No months found... Add a month.
@@ -44,12 +44,12 @@ Dashboard.propTypes = {
   getMonths: PropTypes.func.isRequired,
   getLoads: PropTypes.func.isRequired,
   auth: PropTypes.object.isRequired,
-  month: PropTypes.object.isRequired
+  month: PropTypes.object.isRequired,
 };
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   auth: state.auth,
-  month: state.dashboard
+  month: state.dashboard,
 });
 
 export default connect(mapStateToProps, { getMonths, getLoads })(Dashboard);

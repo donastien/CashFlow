@@ -15,7 +15,6 @@ import {
 
 // Get Months
 export const getMonths = () => async (dispatch) => {
-  dispatch(getLoads);
   try {
     const res = await axios.get('/api/dashboard/month');
 
