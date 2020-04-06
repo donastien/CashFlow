@@ -5,7 +5,7 @@ import {
   GET_MONTH,
   UPDATE_MONTH,
   DELETE_MONTH,
-  DELETE_EXPENSE
+  DELETE_EXPENSE,
 } from '../actions/types';
 
 const initialState = {
@@ -13,10 +13,10 @@ const initialState = {
   month: null,
   repos: [],
   loading: true,
-  errors: {}
+  errors: {},
 };
 
-export default function(state = initialState, action) {
+export default function (state = initialState, action) {
   const { type, payload } = action;
 
   switch (type) {
@@ -24,21 +24,20 @@ export default function(state = initialState, action) {
     case UPDATE_MONTH:
       return {
         ...state,
-        months: null,
         month: payload,
-        loading: false
+        loading: false,
       };
     case GET_MONTHS:
       return {
         ...state,
         months: payload,
-        loading: false
+        loading: false,
       };
     case DASHBOARD_ERROR:
       return {
         ...state,
         error: payload,
-        loading: false
+        loading: false,
       };
     case CLEAR_DASHBOARD:
       return {
@@ -46,19 +45,19 @@ export default function(state = initialState, action) {
         months: null,
         month: null,
         repos: [],
-        loading: false
+        loading: false,
       };
     case DELETE_MONTH:
       return {
         ...state,
-        months: state.months.filter(month => month._id !== payload),
-        loading: false
+        months: state.months.filter((month) => month._id !== payload),
+        loading: false,
       };
     case DELETE_EXPENSE:
       return {
         ...state,
         months: payload,
-        loading: false
+        loading: false,
       };
     default:
       return state;
