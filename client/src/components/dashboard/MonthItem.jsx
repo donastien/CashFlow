@@ -171,6 +171,9 @@ MonthItem.propTypes = {
   month: PropTypes.object.isRequired,
   deleteMonth: PropTypes.func.isRequired,
   load: PropTypes.object.isRequired,
+  tabFromLoad: PropTypes.array.isRequired,
+  tabLoad: PropTypes.array.isRequired,
+  tabToLoad: PropTypes.array.isRequired,
 };
 
 const mapStateToProps = (state) => ({
