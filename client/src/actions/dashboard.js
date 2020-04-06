@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { setAlert } from './alert';
+import { getLoads } from './load';
 
 import {
   GET_MONTHS,
@@ -14,6 +15,7 @@ import {
 
 // Get Months
 export const getMonths = () => async (dispatch) => {
+  dispatch(getLoads);
   try {
     const res = await axios.get('/api/dashboard/month');
 
