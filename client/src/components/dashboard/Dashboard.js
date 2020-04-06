@@ -4,9 +4,8 @@ import { connect } from 'react-redux';
 import Spinner from '../../components/layout/Spinner';
 import DashboardAction from './DashboardAction';
 import MonthItem from './MonthItem';
-import { getMonths } from '../../actions/dashboard';
 import { getLoads } from '../../actions/load';
-
+import { getMonths } from '../../actions/dashboard';
 const Dashboard = ({
   getMonths,
   getLoads,
@@ -41,8 +40,8 @@ const Dashboard = ({
 };
 
 Dashboard.propTypes = {
-  getMonths: PropTypes.func.isRequired,
   getLoads: PropTypes.func.isRequired,
+  getMonths: PropTypes.func.isRequired,
   auth: PropTypes.object.isRequired,
   month: PropTypes.object.isRequired,
 };
@@ -52,4 +51,4 @@ const mapStateToProps = (state) => ({
   month: state.dashboard,
 });
 
-export default connect(mapStateToProps, { getMonths, getLoads })(Dashboard);
+export default connect(mapStateToProps, { getLoads, getMonths })(Dashboard);
