@@ -9,11 +9,13 @@ const LoadItem = ({
   deleteLoad,
 }) => {
   return (
-    <div className='container text-light mt-4'>
+    <div className='container text-dark mt-4'>
       <div className='row justify-content-end'>
         <div className='col-sm-10'>
-          <div className='text-center text-uppercase h3'>{label}</div>
-          <div className='card bg-cardmonth'>
+          <div className='text-center text-white bg-dark shadow rounded-pill text-uppercase h3'>
+            {label}
+          </div>
+          <div className='card shadow bg-cardmonth'>
             <h5 className='text-right m-2'>
               <i
                 onClick={() => deleteLoad(_id)}
@@ -30,7 +32,7 @@ const LoadItem = ({
                 </div>
 
                 <div className='col-sm'>
-                  <div className='h5 card-text text-center'>
+                  <div className='h4 card-text text-center'>
                     <Moment format='MMMM YYYY'>{from}</Moment> -{' '}
                     {!to ? (
                       ' No end date. '
@@ -44,7 +46,10 @@ const LoadItem = ({
                 </div>
               </div>
               <div className='mr-3 text-right'>
-                <a href={`/edit-load/${_id}`} className='btn btn-light'>
+                <a
+                  href={`/edit-load/${_id}`}
+                  className='shadow btn btn-warning'
+                >
                   <i className='fas fa-wrench'></i> Update Load
                 </a>
               </div>

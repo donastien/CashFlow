@@ -1,6 +1,5 @@
 import axios from 'axios';
 import { setAlert } from './alert';
-import { getLoads } from './load';
 
 import {
   GET_MONTHS,

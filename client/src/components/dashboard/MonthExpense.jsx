@@ -23,11 +23,11 @@ const MonthExpense = ({
       </div>
       <div className='col-sm-4'>
         {' '}
-        <p className='m-0 text-center'> Amount: {howMuch}</p>
+        <p className='m-0 h5 text-center'> Amount: {howMuch}</p>
       </div>
 
       <div className='col-sm-4'>
-        <p className='m-0 text-center'>
+        <p className='m-0 text-center h5'>
           <Moment format='DD/MM/YYYY'>{date}</Moment>
         </p>
       </div>

@@ -15,6 +15,7 @@ const MonthItem = ({
   tabLoad,
   tabFromLoad,
   tabToLoad,
+  sumBalance,
 }) => {
   // Compteur Expense
   tabExp = expenses.map((expense) => expense.howMuch);
@@ -38,14 +39,17 @@ const MonthItem = ({
     }
   }
 
+  sumBalance = balance + pay + extra - sumExp - sumLoad;
+  sumBalance = Math.round(sumBalance * 100) / 100;
+
   return (
-    <div className='container text-light mt-4'>
+    <div className='container text-dark mt-4'>
       <div className='row justify-content-end'>
         <div className='col-sm-10'>
-          <h5 className='text-center text-uppercase h3'>
+          <h5 className='text-center bg-dark shadow rounded-pill text-white text-uppercase h3'>
             <Moment format='MMMM YYYY'>{date}</Moment>
           </h5>
-          <div className='card bg-cardmonth'>
+          <div className='card shadow bg-cardmonth'>
             <h5 className='text-right m-2'>
               <i
                 onClick={() => deleteMonth(_id)}
@@ -68,7 +72,7 @@ const MonthItem = ({
                 </div>
                 <div className='col-sm'>
                   <div className='card-text text-center h5'>
-                    Balance: <h4>{balance + pay + extra - sumExp - sumLoad}</h4>
+                    Balance: <h4>{sumBalance}</h4>
                   </div>
                 </div>
                 <div className='col-sm'>
@@ -88,7 +92,7 @@ const MonthItem = ({
                 <div className='col-sm mt-4 text-center'>
                   <p>
                     <button
-                      className='btn btn-danger'
+                      className='btn btn-dark shadow'
                       data-toggle='collapse'
                       data-target={'#exp' + _id}
                       type='button'
@@ -101,19 +105,25 @@ const MonthItem = ({
                 </div>
 
                 <div className='col-sm mt-4 text-center'>
-                  <Link to={`/add-expense/${_id}`} className='btn btn-light'>
+                  <Link
+                    to={`/add-expense/${_id}`}
+                    className='btn btn-warning shadow'
+                  >
                     <i className='fas fa-cart-plus'></i> Add Expense
                   </Link>
                 </div>
                 <div className='col-sm mt-4 text-center'>
-                  <a href={`/edit-month/${_id}`} className='btn btn-light'>
+                  <a
+                    href={`/edit-month/${_id}`}
+                    className='btn btn-warning shadow'
+                  >
                     <i className='fas fa-wrench'></i> Update Month
                   </a>
                 </div>
                 <div className='col-sm mt-4 text-center'>
                   <p>
                     <button
-                      className='btn btn-danger'
+                      className='btn btn-dark shadow'
                       data-toggle='collapse'
                       data-target={'#loads' + _id}
                       type='button'

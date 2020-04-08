@@ -28,8 +28,8 @@ const Dashboard = ({
             {months.length > 0 ? (
               months.map((month) => <MonthItem key={month._id} month={month} />)
             ) : (
-              <h4 className='text-center text-light mt-4'>
-                No months found... Add a month.
+              <h4 className='text-center text-dark  mt-4'>
+                No months found... Add a month or consult the tutorial.
               </h4>
             )}
           </div>

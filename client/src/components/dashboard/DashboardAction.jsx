@@ -7,7 +7,7 @@ import { deleteAccount } from '../../actions/dashboard';
 
 const DashboardAction = ({ auth: { user }, deleteAccount }) => {
   return (
-    <div className='sidebar ml-4 mb-2 rounded'>
+    <div className='sidebar shadow mb-2'>
       <div className='text-center mt-3'>
         <i className='fas fa-user mr-2'></i>Hello {user && user.name}
       </div>
@@ -23,16 +23,16 @@ const DashboardAction = ({ auth: { user }, deleteAccount }) => {
       </div>
       <hr />
 
-      <Link to='/dashboard' className='btn btn-light mt-2 rounded'>
+      <Link to='/dashboard' className='btn btn-transparent mt-2 rounded'>
         <i className='fas fa-tachometer-alt'></i> Dashboard
       </Link>
-      <Link to='/add-month' className='btn btn-light rounded mt-2'>
+      <Link to='/add-month' className='btn btn-transparent rounded mt-2'>
         <i className='fas fa-calendar-plus'></i> Add Month
       </Link>
-      <Link to='/add-load' className='btn btn-light rounded mt-2'>
+      <Link to='/add-load' className='btn btn-transparent rounded mt-2'>
         <i className='fas fa-plus'></i> Add Load
       </Link>
-      <Link to='/load' className='btn btn-light rounded mt-2'>
+      <Link to='/load' className='btn btn-transparent rounded mt-2'>
         <i className='fas fa-redo'></i> Show Loads
       </Link>
       <button

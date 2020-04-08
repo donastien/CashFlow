@@ -8,14 +8,14 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
   const authLinks = (
     <ul className='navbar-nav ml-auto h5'>
       <li className='nav-item active'>
-        <Link className='nav-link hide-sm' to='/dashboard'>
+        <Link className='nav-link hide-sm text-dark' to='/dashboard'>
           Dashboard
         </Link>
       </li>
       <li className='ml-3 mt-2'>
         <a onClick={logout} href='#!'>
           <i className='fas fa-sign-out-alt text-dark'></i>
-          <span className='hide-sm nav-item text-dark '>Logout</span>
+          <span className='hide-sm nav-item text-dark '> Logout</span>
         </a>
       </li>
     </ul>
@@ -24,12 +24,12 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
   const guestLinks = (
     <ul className='navbar-nav ml-auto h5'>
       <li className='nav-item active'>
-        <Link className='nav-link' to='/register'>
+        <Link className='nav-link text-dark ' to='/register'>
           Sign Up
         </Link>
       </li>
       <li className='nav-item'>
-        <Link className='nav-link' to='/login'>
+        <Link className='nav-link text-dark' to='/login'>
           Sign In
         </Link>
       </li>
@@ -37,7 +37,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
   );
 
   return (
-    <nav className='navbar navbar-expand-md navbar-light bg-light fontMontserrat p-0 sticky-top'>
+    <nav className='navbar navbar-expand-md navbar-dark fontMontserrat p-0 sticky-top'>
       <i className='fas fa-money-check-alt fa-w-20 fa-2x text-dark ml-4 mb-1'></i>
       <div className='navbar-brand font-weight-bold'>
         <div className='nav-link ml-3 mt-1 h2'>

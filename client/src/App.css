@@ -18,7 +18,15 @@
 }
 
 .bg-cardmonth {
-  background: #707070;
+  background: #fff;
+}
+
+.navbar {
+  background: #f4f9ff;
+}
+
+.card {
+  border-radius: 10px;
 }
 
 a,
@@ -42,8 +50,9 @@ a:hover {
 }
 
 body {
-  background: #333333;
+  background: #f4f9ff;
 }
+
 .card-signin {
   border: 0;
   border-radius: 1rem;
@@ -145,10 +154,11 @@ body {
   margin: 0;
   padding: 0;
   width: 250px;
-  background-color: #ffffff;
+  background-color: #fff;
   position: fixed;
   height: 100%;
   overflow: auto;
+  border-radius: 10px;
 }
 
 /* Sidebar links */
@@ -189,6 +199,7 @@ div.content {
     width: 100%;
     height: auto;
     position: relative;
+    margin-top: 1%;
   }
   .sidebar a {
     float: left;
