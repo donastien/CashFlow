@@ -1,28 +1,22 @@
 import React, { Fragment, useState } from 'react';
-import { Link, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { login } from '../../actions/auth';
+import { forgot } from '../../actions/auth';
 
-const Login = ({ login, isAuthenticated }) => {
+const ForgotPassword = ({ forgot }) => {
   const [formData, setFormData] = useState({
     email: '',
-    password: '',
   });
 
-  const { email, password } = formData;
+  const { email } = formData;
 
   const onChange = (e) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
 
   const onSubmit = async (e) => {
     e.preventDefault();
-    login(email, password);
+    forgot(email);
   };
-
-  if (isAuthenticated) {
-    return <Redirect to='/dashboard' />;
-  }
 
   return (
     <Fragment>
@@ -32,7 +26,7 @@ const Login = ({ login, isAuthenticated }) => {
             <div className='card card-signin my-5'>
               <div className='card-body'>
                 <h5 className='card-title text-center'>
-                  <i className='fas fa-user-astronaut'></i> Sign In
+                  <i class='fas fa-paper-plane'></i> Enter your email
                 </h5>
                 <form className='form-signin' onSubmit={(e) => onSubmit(e)}>
                   <div className='form-label-group'>
@@ -49,34 +43,13 @@ const Login = ({ login, isAuthenticated }) => {
                     <label htmlFor='inputEmail'>Email address</label>
                   </div>
 
-                  <div className='form-label-group'>
-                    <input
-                      type='password'
-                      id='inputPassword'
-                      className='form-control'
-                      placeholder='Password'
-                      name='password'
-                      value={password}
-                      onChange={(e) => onChange(e)}
-                      minLength='8'
-                    />
-                    <label htmlFor='inputPassword'>Password</label>
-                  </div>
-
                   <button
                     className='btn btn-lg btn-info btn-block text-uppercase'
                     type='submit'
-                    value='Login'
+                    value='Forgot'
                   >
-                    Sign In
+                    Send
                   </button>
-
-                  <p className='text-center mt-2'>
-                    <Link to='/forgot_password'>Forgot Password ?</Link>
-                  </p>
-                  <p className='text-center'>
-                    Don't have an account? <Link to='/register'>Sign Up</Link>
-                  </p>
                 </form>
               </div>
             </div>
@@ -87,13 +60,8 @@ const Login = ({ login, isAuthenticated }) => {
   );
 };
 
-Login.propTypes = {
-  login: PropTypes.func.isRequired,
-  isAuthenticated: PropTypes.bool,
+ForgotPassword.propTypes = {
+  forgot: PropTypes.func.isRequired,
 };
 
-const mapStateToProps = (state) => ({
-  isAuthenticated: state.auth.isAuthenticated,
-});
-
-export default connect(mapStateToProps, { login })(Login);
+export default connect(null, { forgot })(ForgotPassword);

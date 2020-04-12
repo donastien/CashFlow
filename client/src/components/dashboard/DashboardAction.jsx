@@ -9,7 +9,7 @@ const DashboardAction = ({ auth: { user }, deleteAccount }) => {
   return (
     <div className='sidebar shadow mb-2'>
       <div className='text-center mt-3'>
-        <i className='fas fa-user mr-2'></i>Hello {user && user.name}
+        <i className='fas fa-user-astronaut'></i> Hello {user && user.name}
       </div>
       <div className='text-center mt-3'>
         <img

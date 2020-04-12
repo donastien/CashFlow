@@ -22,3 +22,5 @@ export const GET_LOADS = 'GET_LOADS';
 export const LOAD_ERROR = 'LOAD_ERROR';
 export const CLEAR_LOAD = 'CLEAR_LOAD';
 export const DELETE_EXPENSE = 'DELETE_EXPENSE';
+export const FORGOT_SUCCESS = 'FORGOT_SUCCESS';
+export const RESET_SUCCESS = 'RESET_SUCCESS';

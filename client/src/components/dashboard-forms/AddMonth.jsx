@@ -10,15 +10,15 @@ const AddMonth = ({ addMonth, history }) => {
     date: '',
     balance: '',
     pay: '',
-    extra: ''
+    extra: '',
   });
 
   const { date, balance, pay, extra } = formData;
 
-  const onChange = e =>
+  const onChange = (e) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
 
-  const onSubmit = e => {
+  const onSubmit = (e) => {
     e.preventDefault();
     addMonth(formData, history);
   };
@@ -34,7 +34,7 @@ const AddMonth = ({ addMonth, history }) => {
                 <h5 className='card-title text-center'>
                   <i className='far fa-calendar-plus'></i> Add a Month
                 </h5>
-                <form className='form-signin' onSubmit={e => onSubmit(e)}>
+                <form className='form-signin' onSubmit={(e) => onSubmit(e)}>
                   <div className='form-label-group'>
                     <input
                       type='month'
@@ -43,7 +43,7 @@ const AddMonth = ({ addMonth, history }) => {
                       placeholder='Month'
                       name='date'
                       value={date}
-                      onChange={e => onChange(e)}
+                      onChange={(e) => onChange(e)}
                     />
                     <label htmlFor='inputMonth'>Month</label>
                   </div>
@@ -55,7 +55,7 @@ const AddMonth = ({ addMonth, history }) => {
                       placeholder='Balance'
                       name='balance'
                       value={balance}
-                      onChange={e => onChange(e)}
+                      onChange={(e) => onChange(e)}
                     />
                     <label htmlFor='inputBalance'>Balance</label>
                   </div>
@@ -68,7 +68,7 @@ const AddMonth = ({ addMonth, history }) => {
                       placeholder='Pay'
                       name='pay'
                       value={pay}
-                      onChange={e => onChange(e)}
+                      onChange={(e) => onChange(e)}
                     />
                     <label htmlFor='inputPay'>PayCheck</label>
                   </div>
@@ -81,13 +81,13 @@ const AddMonth = ({ addMonth, history }) => {
                       placeholder='Extra'
                       name='extra'
                       value={extra}
-                      onChange={e => onChange(e)}
+                      onChange={(e) => onChange(e)}
                     />
                     <label htmlFor='inputExtra'>Extra</label>
                   </div>
 
                   <button
-                    className='btn btn-lg btn-primary btn-block text-uppercase'
+                    className='btn btn-lg btn-info btn-block text-uppercase'
                     type='submit'
                   >
                     Add
@@ -103,7 +103,7 @@ const AddMonth = ({ addMonth, history }) => {
 };
 
 AddMonth.propTypes = {
-  addMonth: PropTypes.func.isRequired
+  addMonth: PropTypes.func.isRequired,
 };
 
 export default connect(null, { addMonth })(withRouter(AddMonth));

@@ -83,7 +83,7 @@ const EditLoad = ({
                   </div>
 
                   <button
-                    className='btn btn-lg btn-primary btn-block text-uppercase'
+                    className='btn btn-lg btn-info btn-block text-uppercase'
                     type='submit'
                   >
                     Update

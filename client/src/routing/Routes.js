@@ -12,6 +12,8 @@ import Loads from '../components/load/Loads';
 import AddLoad from '../components/load-forms/AddLoad';
 import EditLoad from '../components/load-forms/EditLoad';
 import NotFound from '../components/layout/NotFound';
+import ForgotPassword from '../components/auth/ForgotPassword';
+import ResetPassword from '../components/auth/ResetPassword';
 
 const Routes = () => {
   return (
@@ -20,6 +22,12 @@ const Routes = () => {
       <Switch>
         <Route exact path='/register' component={Register} />
         <Route exact path='/login' component={Login} />
+        <Route exact path='/forgot_password' component={ForgotPassword} />
+        <Route
+          exact
+          path='/reset_password/:reset_password_token'
+          component={ResetPassword}
+        />
 
         <PrivateRoute exact path='/dashboard' component={Dashboard} />
         <PrivateRoute exact path='/add-month' component={AddMonth} />

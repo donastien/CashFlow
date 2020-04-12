@@ -12,17 +12,17 @@ const AddLoad = ({ addLoad, history }) => {
     from: '',
     to: '',
     current: false,
-    description: ''
+    description: '',
   });
 
   const [toDateDisabled, toggleDisabled] = useState(false);
 
   const { label, howMuch, from, to, current, description } = formData;
 
-  const onChange = e =>
+  const onChange = (e) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
 
-  const onSubmit = e => {
+  const onSubmit = (e) => {
     e.preventDefault();
     addLoad(formData, history);
   };
@@ -39,7 +39,7 @@ const AddLoad = ({ addLoad, history }) => {
                   <i className='far fa-calendar-plus'></i> Add a Load (Per
                   Month)
                 </h5>
-                <form className='form-signin' onSubmit={e => onSubmit(e)}>
+                <form className='form-signin' onSubmit={(e) => onSubmit(e)}>
                   <div className='form-label-group'>
                     <input
                       type='text'
@@ -48,7 +48,7 @@ const AddLoad = ({ addLoad, history }) => {
                       placeholder='Label'
                       name='label'
                       value={label}
-                      onChange={e => onChange(e)}
+                      onChange={(e) => onChange(e)}
                     />
                     <label htmlFor='inputLabel'>Label</label>
                   </div>
@@ -60,7 +60,7 @@ const AddLoad = ({ addLoad, history }) => {
                       placeholder='howMuch'
                       name='howMuch'
                       value={howMuch}
-                      onChange={e => onChange(e)}
+                      onChange={(e) => onChange(e)}
                     />
                     <label htmlFor='inputhowMuch'>How Much ?</label>
                   </div>
@@ -73,7 +73,7 @@ const AddLoad = ({ addLoad, history }) => {
                       placeholder='From'
                       name='from'
                       value={from}
-                      onChange={e => onChange(e)}
+                      onChange={(e) => onChange(e)}
                     />
                     <label htmlFor='inputFrom'>From</label>
                   </div>
@@ -86,7 +86,7 @@ const AddLoad = ({ addLoad, history }) => {
                       placeholder='Current'
                       name='current'
                       value={current}
-                      onChange={e => {
+                      onChange={(e) => {
                         setFormData({ ...formData, current: !current });
                         toggleDisabled(!toDateDisabled);
                       }}
@@ -102,7 +102,7 @@ const AddLoad = ({ addLoad, history }) => {
                       placeholder='To'
                       name='to'
                       value={to}
-                      onChange={e => onChange(e)}
+                      onChange={(e) => onChange(e)}
                       disabled={toDateDisabled ? 'disabled' : ''}
                     />
                     <label htmlFor='inputTo'>To</label>
@@ -116,13 +116,13 @@ const AddLoad = ({ addLoad, history }) => {
                       placeholder='Description'
                       name='description'
                       value={description}
-                      onChange={e => onChange(e)}
+                      onChange={(e) => onChange(e)}
                     />
                     <label htmlFor='inputDescription'>Description</label>
                   </div>
 
                   <button
-                    className='btn btn-lg btn-primary btn-block text-uppercase'
+                    className='btn btn-lg btn-info btn-block text-uppercase'
                     type='submit'
                   >
                     Add
@@ -138,7 +138,7 @@ const AddLoad = ({ addLoad, history }) => {
 };
 
 AddLoad.propTypes = {
-  addLoad: PropTypes.func.isRequired
+  addLoad: PropTypes.func.isRequired,
 };
 
 export default connect(null, { addLoad })(withRouter(AddLoad));
