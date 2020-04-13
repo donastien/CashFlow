@@ -137,7 +137,7 @@ router.post('/forgot_password', async (req, res) => {
       template: 'forgot-password-email',
       subject: 'CashFlow: Password help has arrived!',
       context: {
-        url: 'http://localhost:3000/reset_password/' + token,
+        url: 'https://getcashflow.io/reset_password/' + token,
         name: user.name.split(' ')[0],
       },
     };
