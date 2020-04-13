@@ -22,7 +22,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
   );
 
   const guestLinks = (
-    <ul className='navbar-nav ml-auto h5'>
+    <ul className='navbar-nav text-dark ml-auto h5'>
       <li className='nav-item active'>
         <Link className='nav-link text-dark ' to='/register'>
           Sign Up
@@ -51,7 +51,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
       </div>
 
       <button
-        className='navbar-toggler'
+        className='navbar-toggler bg-dark mr-3'
         data-toggle='collapse'
         data-target='#navbar'
       >
