@@ -19,19 +19,21 @@ app.use('/api/dashboard/load', require('./routes/api/dashboard/load'));
 
 // Serve static assets in production
 if (process.env.NODE_ENV === 'production') {
+  app.use((req, res, next) => {
+    if (process.env.NODE_ENV === ' production ') {
+      if (req.headers.host === ' getcashflow.herokuapp.com ')
+        return res.redirect(301, ' https://www.getcashflow.io ');
+      if (req.headers[' x-forwarded-proto '] !== ' https ')
+        return res.redirect(' https:// ' + req.headers.host + req.url);
+      else return next();
+    } else return next();
+  });
+
   // Set static folder
   app.use(express.static('client/build'));
 
   app.get('*', (req, res) => {
     res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
-  });
-
-  app.use(function (req, resp, next) {
-    if (req.headers['x-forwarded-proto'] == 'http') {
-      return resp.redirect(301, 'https://' + req.headers.host + '/');
-    } else {
-      return next();
-    }
   });
 }
 
