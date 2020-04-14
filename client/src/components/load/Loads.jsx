@@ -19,9 +19,9 @@ const Loads = ({ getLoads, load: { loads, loading } }) => {
           <DashboardAction />
           <div>
             {loads.length > 0 ? (
-              loads.map(load => <LoadItem key={load._id} load={load} />)
+              loads.map((load) => <LoadItem key={load._id} load={load} />)
             ) : (
-              <h4 className='text-center text-light mt-4'>No loads found...</h4>
+              <h4 className='text-center text-dark mt-4'>No loads found...</h4>
             )}
           </div>
         </Fragment>
@@ -32,11 +32,11 @@ const Loads = ({ getLoads, load: { loads, loading } }) => {
 
 Loads.propTypes = {
   getLoads: PropTypes.func.isRequired,
-  load: PropTypes.object.isRequired
+  load: PropTypes.object.isRequired,
 };
 
-const mapStateToProps = state => ({
-  load: state.load
+const mapStateToProps = (state) => ({
+  load: state.load,
 });
 
 export default connect(mapStateToProps, { getLoads })(Loads);
