@@ -26,10 +26,12 @@ if (process.env.NODE_ENV === 'production') {
     res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
   });
 
-  app.use((req, res, next) => {
-    if (req.header('x-forwarded-proto') !== 'https')
-      res.redirect(`https://${req.header('host')}${req.url}`);
-    else next();
+  app.use(function (req, resp, next) {
+    if (req.headers['x-forwarded-proto'] == 'http') {
+      return resp.redirect(301, 'https://' + req.headers.host + '/');
+    } else {
+      return next();
+    }
   });
 }
 
