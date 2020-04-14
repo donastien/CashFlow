@@ -23,6 +23,7 @@ const MonthItem = ({
   for (var i = 0; i < tabExp.length; i++) {
     sumExp += tabExp[i];
   }
+  sumExp = Math.round(sumExp * 100) / 100;
 
   // Compteur Load
   tabLoad = loads.map((load) => load.howMuch);
@@ -38,6 +39,7 @@ const MonthItem = ({
       sumLoad += tabLoad[j];
     }
   }
+  sumLoad = Math.round(sumLoad * 100) / 100;
 
   sumBalance = balance + pay + extra - sumExp - sumLoad;
   sumBalance = Math.round(sumBalance * 100) / 100;
