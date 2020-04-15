@@ -10,15 +10,16 @@ const MonthLoad = ({
   return (
     <Fragment>
       {(monthDate >= from && monthDate <= to) || (monthDate >= from && !to) ? (
-        <div className='row text-light'>
-          <div className='col-sm-6'>
-            <h5 className='m-0 col-sm text-center'>{label}</h5>
+        <div>
+          <div className='row text-light'>
+            <div className='col-sm-6'>
+              <h5 className='m-0 col-sm text-center'>{label}</h5>
+            </div>
+            <div className='col-sm-6'>
+              {' '}
+              <h5 className='m-0 text-center'> Amount: {howMuch}</h5>
+            </div>
           </div>
-          <div className='col-sm-6'>
-            {' '}
-            <h5 className='m-0 text-center'> Amount: {howMuch}</h5>
-          </div>
-
           <hr className='bg-white' />
         </div>
       ) : (
