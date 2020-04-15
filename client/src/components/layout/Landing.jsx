@@ -22,10 +22,19 @@ const Landing = () => {
         </div>
       </div>
       <div className='row'>
-        <div className='col-lg-12 mt-5 text-center'>
+        <div className='col-lg-4 mt-5'></div>
+        <div className='col-lg-4 mt-5 text-center'>
           <a href='http://www.freepik.com'>
             <h6 className='text-white footer'>Designed by Freepik.</h6>
           </a>
+        </div>
+        <div className='col-lg-4 mt-5 text-right'>
+          <h6 className='text-white footer'>
+            © 2020 DonastienKaroumbata{' '}
+            <a href='https://www.linkedin.com/in/dkaroumbata/'>
+              <i class='fab fa-linkedin fa-w-20 fa-2x'></i>
+            </a>
+          </h6>
         </div>
       </div>
     </section>

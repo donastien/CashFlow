@@ -38,9 +38,9 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
 
   return (
     <nav className='navbar navbar-expand-md navbar-dark fontMontserrat p-0 sticky-top'>
-      <i className='fas fa-money-check-alt fa-w-20 fa-2x text-dark ml-4 mb-1'></i>
+      <i className='fas fa-money-check-alt fa-w-20 fa-4x text-dark ml-4 mb-1'></i>
       <div className='navbar-brand font-weight-bold'>
-        <div className='nav-link ml-3 mt-1 h2'>
+        <div className='nav-link ml-2 mt-1 h2'>
           <Link to='/' className='text-dark'>
             CashFlow
           </Link>
