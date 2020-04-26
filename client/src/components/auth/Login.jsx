@@ -32,7 +32,7 @@ const Login = ({ login, isAuthenticated }) => {
             <div className='card card-signin my-5'>
               <div className='card-body'>
                 <h5 className='card-title text-center'>
-                  <i className='fas fa-user-astronaut'></i> Sign In
+                  <i className='fas fa-user-astronaut'></i> Login
                 </h5>
                 <form className='form-signin' onSubmit={(e) => onSubmit(e)}>
                   <div className='form-label-group'>
@@ -72,10 +72,10 @@ const Login = ({ login, isAuthenticated }) => {
                   </button>
 
                   <p className='text-center mt-2'>
-                    <Link to='/forgot_password'>Forgot Password ?</Link>
+                    <Link to='/forgot_password'>Mot de passe perdu ?</Link>
                   </p>
                   <p className='text-center'>
-                    Don't have an account? <Link to='/register'>Sign Up</Link>
+                    Vous n'avez pas de compte? <Link to='/register'>S'enregistrer</Link>
                   </p>
                 </form>
               </div>

@@ -17,7 +17,7 @@ const MonthLoad = ({
             </div>
             <div className='col-sm-6'>
               {' '}
-              <h5 className='m-0 text-center'> Amount: {howMuch}</h5>
+              <h5 className='m-0 text-center text-danger'> {howMuch}</h5>
             </div>
           </div>
           <hr className='bg-white' />

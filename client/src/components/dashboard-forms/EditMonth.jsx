@@ -49,7 +49,7 @@ const EditMonth = ({
             <div className='card bg-dark card-signin my-5'>
               <div className='card-body'>
                 <h5 className='card-title text-center text-light'>
-                  <i className='far fa-calendar-plus'></i> Update{' '}
+                  <i className='far fa-calendar-plus'></i> Modifier{' '}
                   <Moment format='MMMM YYYY'>{date}</Moment>
                 </h5>
                 <form className='form-signin' onSubmit={e => onSubmit(e)}>
@@ -64,7 +64,7 @@ const EditMonth = ({
                       onChange={e => onChange(e)}
                     />
                     <label className='text-light' htmlFor='inputBalance'>
-                      Balance
+                      Solde
                     </label>
                   </div>
 
@@ -79,7 +79,7 @@ const EditMonth = ({
                       onChange={e => onChange(e)}
                     />
                     <label className='text-light' htmlFor='inputPay'>
-                      PayCheck
+                      Revenus
                     </label>
                   </div>
 
@@ -102,7 +102,7 @@ const EditMonth = ({
                     className='btn btn-lg btn-warning btn-block text-uppercase'
                     type='submit'
                   >
-                    Update
+                    Modifier
                   </button>
                 </form>
               </div>

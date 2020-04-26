@@ -26,7 +26,7 @@ const ForgotPassword = ({ forgot }) => {
             <div className='card card-signin my-5'>
               <div className='card-body'>
                 <h5 className='card-title text-center'>
-                  <i class='fas fa-paper-plane'></i> Enter your email
+                  <i class='fas fa-paper-plane'></i> Entrer votre email
                 </h5>
                 <form className='form-signin' onSubmit={(e) => onSubmit(e)}>
                   <div className='form-label-group'>
@@ -48,7 +48,7 @@ const ForgotPassword = ({ forgot }) => {
                     type='submit'
                     value='Forgot'
                   >
-                    Send
+                    Envoyer
                   </button>
                 </form>
               </div>

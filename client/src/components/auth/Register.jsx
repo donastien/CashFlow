@@ -39,7 +39,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
             <div className='card card-signin my-5'>
               <div className='card-body'>
                 <h5 className='card-title text-center'>
-                  <i className='fas fa-user mr-2'></i>Sign Up
+                  <i className='fas fa-user mr-2'></i>Commencer dès maintenant
                 </h5>
                 <form className='form-signin' onSubmit={(e) => onSubmit(e)}>
                   <div className='form-label-group'>
@@ -98,11 +98,11 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
                     type='submit'
                     value='Register'
                   >
-                    Sign Up
+                    Start
                   </button>
 
                   <p className='text-center'>
-                    Already have an account? <Link to='/login'>Sign In</Link>
+                    Déjà un compte? <Link to='/login'>Login</Link>
                   </p>
                 </form>
               </div>

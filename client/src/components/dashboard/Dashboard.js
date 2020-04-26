@@ -6,6 +6,7 @@ import DashboardAction from './DashboardAction';
 import MonthItem from './MonthItem';
 import { getLoads } from '../../actions/load';
 import { getMonths } from '../../actions/dashboard';
+
 const Dashboard = ({
   getMonths,
   getLoads,
@@ -29,7 +30,7 @@ const Dashboard = ({
               months.map((month) => <MonthItem key={month._id} month={month} />)
             ) : (
               <h4 className='text-center text-dark  mt-4'>
-                No months found... Add a month or consult the tutorial.
+                Vous n'avez pas encore de mois... Ajouter un mois.
               </h4>
             )}
           </div>

@@ -27,7 +27,7 @@ const LoadItem = ({
               <div className='row'>
                 <div className='col-sm'>
                   <div className='h5 card-text text-center'>
-                    Amount: <h4>{howMuch}</h4>
+                    Montant: <h4>{howMuch}</h4>
                   </div>
                 </div>
 
@@ -50,7 +50,7 @@ const LoadItem = ({
                   href={`/edit-load/${_id}`}
                   className='shadow btn btn-warning'
                 >
-                  <i className='fas fa-wrench'></i> Update Load
+                  <i className='fas fa-wrench'></i> Modifier
                 </a>
               </div>
             </div>

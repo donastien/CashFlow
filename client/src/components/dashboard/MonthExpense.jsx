@@ -24,7 +24,7 @@ const MonthExpense = ({
         </div>
         <div className='col-sm-4'>
           {' '}
-          <p className='m-0 h5 text-center'> Amount: {howMuch}</p>
+          <p className='m-0 h5 text-center text-danger'> {howMuch}</p>
         </div>
 
         <div className='col-sm-4'>

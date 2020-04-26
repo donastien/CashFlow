@@ -66,7 +66,7 @@ const ResetPassword = ({ setAlert, reset, match }) => {
                     type='submit'
                     value='Reset'
                   >
-                    Save
+                    Enregistrer
                   </button>
                 </form>
               </div>

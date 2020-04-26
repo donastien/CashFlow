@@ -63,30 +63,30 @@ const MonthItem = ({
               <div className='row'>
                 <div className='col-sm'>
                   <div className='card-text text-center h5'>
-                    Expenses:
-                    <h4>{sumExp}</h4>
+                    Dépenses:
+                    <h4 className="text-info">{sumExp}</h4>
                   </div>
                 </div>
                 <div className='col-sm'>
                   <div className='h5 card-text text-center'>
-                    Paycheck: <h4>{pay}</h4>
+                    Revenus: <h4 className="text-info">{pay}</h4>
                   </div>
                 </div>
                 <div className='col-sm'>
                   <div className='card-text text-center h5'>
-                    Balance: <h4>{sumBalance}</h4>
+                    Votre Solde: <h4 className="text-info">{sumBalance}</h4>
                   </div>
                 </div>
                 <div className='col-sm'>
                   <div className='h5 card-text text-center'>
-                    Extra: <h4>{extra}</h4>
+                    Extra: <h4 className="text-info">{extra}</h4>
                   </div>
                 </div>
 
                 <div className='col-sm'>
                   <div className='card-text text-center h5'>
-                    Loads:
-                    <h4>{sumLoad}</h4>
+                    Charges:
+                    <h4 className="text-info">{sumLoad}</h4>
                   </div>
                 </div>
               </div>
@@ -101,7 +101,7 @@ const MonthItem = ({
                       aria-expanded='false'
                       aria-controls={'exp' + _id}
                     >
-                      Show Expenses <i className='fas fa-angle-down ml-2'></i>
+                      Voir Dépenses <i className='fas fa-angle-down ml-2'></i>
                     </button>
                   </p>
                 </div>
@@ -111,7 +111,7 @@ const MonthItem = ({
                     to={`/add-expense/${_id}`}
                     className='btn btn-warning shadow'
                   >
-                    <i className='fas fa-cart-plus'></i> Add Expense
+                    <i className='fas fa-cart-plus'></i> Ajouter Dépense
                   </Link>
                 </div>
                 <div className='col-sm mt-4 text-center'>
@@ -119,7 +119,7 @@ const MonthItem = ({
                     href={`/edit-month/${_id}`}
                     className='btn btn-warning shadow'
                   >
-                    <i className='fas fa-wrench'></i> Update Month
+                    <i className='fas fa-wrench'></i> Modifier le Mois
                   </a>
                 </div>
                 <div className='col-sm mt-4 text-center'>
@@ -132,7 +132,7 @@ const MonthItem = ({
                       aria-expanded='false'
                       aria-controls={'loads' + _id}
                     >
-                      Show Loads <i className='fas fa-angle-down ml-2'></i>
+                      Voir Charges <i className='fas fa-angle-down ml-2'></i>
                     </button>
                   </p>
                 </div>
@@ -150,7 +150,7 @@ const MonthItem = ({
                       ))}
                     </Fragment>
                   ) : (
-                    <h4> No Loads...</h4>
+                    <h4> Pas de charge...</h4>
                   )}
                 </div>
               </div>
@@ -167,7 +167,7 @@ const MonthItem = ({
                       ))}
                     </Fragment>
                   ) : (
-                    <h4>No expense...</h4>
+                    <h4>Pas de dépense...</h4>
                   )}
                 </div>
               </div>

@@ -9,7 +9,7 @@ const NotFound = () => {
 
       <p className='large text-dark text-center'>
         {' '}
-        Sorry, this page does not exist.
+        Désolé cette page n'existe pas.
       </p>
     </Fragment>
   );

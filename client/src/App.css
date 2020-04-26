@@ -2,6 +2,10 @@
   font-family: 'Montserrat', sans-serif;
 }
 
+.fontRoboto {
+  font-family: 'Roboto', sans-serif;
+}
+
 .landingText {
   margin-top: 48vh; /* poussé de la moitié de hauteur de viewport */
   transform: translateY(-50%); /* tiré de la moitié de sa propre hauteur */
@@ -43,7 +47,7 @@ a:hover {
 }
 
 .background {
-  background-image: url('./img/landing.png');
+  background-color: #F0F2F3;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

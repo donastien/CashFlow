@@ -15,7 +15,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
       <li className='ml-3 mt-2'>
         <a onClick={logout} href='#!'>
           <i className='fas fa-sign-out-alt text-dark'></i>
-          <span className='hide-sm nav-item text-dark '> Logout</span>
+          <span className='hide-sm nav-item text-dark '> Se déconnecter</span>
         </a>
       </li>
     </ul>
@@ -25,12 +25,12 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
     <ul className='navbar-nav text-dark ml-auto h5'>
       <li className='nav-item active'>
         <Link className='nav-link text-dark ' to='/register'>
-          Sign Up
+          S'enregistrer
         </Link>
       </li>
       <li className='nav-item'>
         <Link className='nav-link text-dark' to='/login'>
-          Sign In
+          Login
         </Link>
       </li>
     </ul>
@@ -45,7 +45,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
             CashFlow
           </Link>
           <Link to='/tutorial' className='text-secondary h5 ml-4'>
-            Tutorial
+            Comment ça fonctionne ?
           </Link>
         </div>
       </div>

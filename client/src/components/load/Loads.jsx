@@ -21,7 +21,7 @@ const Loads = ({ getLoads, load: { loads, loading } }) => {
             {loads.length > 0 ? (
               loads.map((load) => <LoadItem key={load._id} load={load} />)
             ) : (
-              <h4 className='text-center text-dark mt-4'>No loads found...</h4>
+              <h4 className='text-center text-dark mt-4'>Pas de charges...</h4>
             )}
           </div>
         </Fragment>
