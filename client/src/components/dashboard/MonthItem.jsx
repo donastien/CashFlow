@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Moment from 'react-moment';
+import 'moment/locale/fr';
 import { deleteMonth } from '../../actions/dashboard';
 import MonthExpense from './MonthExpense';
 import MonthLoad from './MonthLoad';
@@ -49,7 +50,9 @@ const MonthItem = ({
       <div className='row justify-content-end'>
         <div className='col-sm-10'>
           <h5 className='text-center bg-dark shadow rounded-pill text-white text-uppercase h3'>
-            <Moment format='MMMM YYYY'>{date}</Moment>
+            <Moment locale='fr' format='MMMM YYYY'>
+              {date}
+            </Moment>
           </h5>
           <div className='card shadow bg-cardmonth'>
             <h5 className='text-right m-2'>
@@ -64,29 +67,29 @@ const MonthItem = ({
                 <div className='col-sm'>
                   <div className='card-text text-center h5'>
                     Dépenses:
-                    <h4 className="text-info">{sumExp}</h4>
+                    <h4 className='text-info'>{sumExp}</h4>
                   </div>
                 </div>
                 <div className='col-sm'>
                   <div className='h5 card-text text-center'>
-                    Revenus: <h4 className="text-info">{pay}</h4>
+                    Revenus: <h4 className='text-info'>{pay}</h4>
                   </div>
                 </div>
                 <div className='col-sm'>
                   <div className='card-text text-center h5'>
-                    Votre Solde: <h4 className="text-info">{sumBalance}</h4>
+                    Votre Solde: <h4 className='text-info'>{sumBalance}</h4>
                   </div>
                 </div>
                 <div className='col-sm'>
                   <div className='h5 card-text text-center'>
-                    Extra: <h4 className="text-info">{extra}</h4>
+                    Extra: <h4 className='text-info'>{extra}</h4>
                   </div>
                 </div>
 
                 <div className='col-sm'>
                   <div className='card-text text-center h5'>
                     Charges:
-                    <h4 className="text-info">{sumLoad}</h4>
+                    <h4 className='text-info'>{sumLoad}</h4>
                   </div>
                 </div>
               </div>
