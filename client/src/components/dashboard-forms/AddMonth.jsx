@@ -32,7 +32,7 @@ const AddMonth = ({ addMonth, history }) => {
             <div className='card card-signin my-5'>
               <div className='card-body'>
                 <h5 className='card-title text-center'>
-                  <i className='far fa-calendar-plus'></i> Add a Month
+                  <i className='far fa-calendar-plus'></i> Ajouter un mois
                 </h5>
                 <form className='form-signin' onSubmit={(e) => onSubmit(e)}>
                   <div className='form-label-group'>
@@ -45,7 +45,7 @@ const AddMonth = ({ addMonth, history }) => {
                       value={date}
                       onChange={(e) => onChange(e)}
                     />
-                    <label htmlFor='inputMonth'>Month</label>
+                    <label htmlFor='inputMonth'>Mois</label>
                   </div>
                   <div className='form-label-group'>
                     <input
@@ -57,7 +57,7 @@ const AddMonth = ({ addMonth, history }) => {
                       value={balance}
                       onChange={(e) => onChange(e)}
                     />
-                    <label htmlFor='inputBalance'>Balance</label>
+                    <label htmlFor='inputBalance'>Solde</label>
                   </div>
 
                   <div className='form-label-group'>
@@ -70,7 +70,7 @@ const AddMonth = ({ addMonth, history }) => {
                       value={pay}
                       onChange={(e) => onChange(e)}
                     />
-                    <label htmlFor='inputPay'>PayCheck</label>
+                    <label htmlFor='inputPay'>Revenus</label>
                   </div>
 
                   <div className='form-label-group'>
@@ -90,7 +90,7 @@ const AddMonth = ({ addMonth, history }) => {
                     className='btn btn-lg btn-info btn-block text-uppercase'
                     type='submit'
                   >
-                    Add
+                    Ajouter
                   </button>
                 </form>
               </div>

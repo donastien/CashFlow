@@ -36,8 +36,8 @@ const AddLoad = ({ addLoad, history }) => {
             <div className='card card-signin my-5'>
               <div className='card-body'>
                 <h5 className='card-title text-center'>
-                  <i className='far fa-calendar-plus'></i> Add a Load (Per
-                  Month)
+                  <i className='far fa-calendar-plus'></i> Ajouter une charge /
+                  mois
                 </h5>
                 <form className='form-signin' onSubmit={(e) => onSubmit(e)}>
                   <div className='form-label-group'>
@@ -50,7 +50,7 @@ const AddLoad = ({ addLoad, history }) => {
                       value={label}
                       onChange={(e) => onChange(e)}
                     />
-                    <label htmlFor='inputLabel'>Label</label>
+                    <label htmlFor='inputLabel'>Intitulé</label>
                   </div>
                   <div className='form-label-group'>
                     <input
@@ -62,7 +62,7 @@ const AddLoad = ({ addLoad, history }) => {
                       value={howMuch}
                       onChange={(e) => onChange(e)}
                     />
-                    <label htmlFor='inputhowMuch'>How Much ?</label>
+                    <label htmlFor='inputhowMuch'>Montant</label>
                   </div>
 
                   <div className='form-label-group'>
@@ -75,7 +75,7 @@ const AddLoad = ({ addLoad, history }) => {
                       value={from}
                       onChange={(e) => onChange(e)}
                     />
-                    <label htmlFor='inputFrom'>From</label>
+                    <label htmlFor='inputFrom'>Débute le</label>
                   </div>
 
                   <div className='form-label-group'>
@@ -105,7 +105,7 @@ const AddLoad = ({ addLoad, history }) => {
                       onChange={(e) => onChange(e)}
                       disabled={toDateDisabled ? 'disabled' : ''}
                     />
-                    <label htmlFor='inputTo'>To</label>
+                    <label htmlFor='inputTo'>Termine le</label>
                   </div>
 
                   <div className='form-label-group'>
@@ -125,7 +125,7 @@ const AddLoad = ({ addLoad, history }) => {
                     className='btn btn-lg btn-info btn-block text-uppercase'
                     type='submit'
                   >
-                    Add
+                    Ajouter
                   </button>
                 </form>
               </div>

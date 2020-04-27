@@ -26,7 +26,7 @@ const AddExpense = ({ addExpense, history, match }) => {
             <div className='card bg-dark card-signin my-5'>
               <div className='card-body'>
                 <h5 className='card-title text-center text-light'>
-                  <i className='far fa-calendar-plus'></i> Add a Expense
+                  <i className='far fa-calendar-plus'></i> Ajouter une dépense
                 </h5>
                 <form
                   className='form-signin'
@@ -46,7 +46,7 @@ const AddExpense = ({ addExpense, history, match }) => {
                       onChange={(e) => onChange(e)}
                     />
                     <label className='text-light' htmlFor='inputLabel'>
-                      Label
+                      Intitulé
                     </label>
                   </div>
                   <div className='form-label-group'>
@@ -60,7 +60,7 @@ const AddExpense = ({ addExpense, history, match }) => {
                       onChange={(e) => onChange(e)}
                     />
                     <label className='text-light' htmlFor='inputhowMuch'>
-                      How Much ?
+                      Montant
                     </label>
                   </div>
 
@@ -83,7 +83,7 @@ const AddExpense = ({ addExpense, history, match }) => {
                     className='btn btn-lg btn-light btn-block text-uppercase'
                     type='submit'
                   >
-                    Add a Expense
+                    Ajouter une dépense
                   </button>
                 </form>
               </div>

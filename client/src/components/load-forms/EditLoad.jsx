@@ -33,7 +33,7 @@ const EditLoad = ({
     });
   }, [loading, getLoad]);
 
-  const { howMuch, description } = formData;
+  const { label, howMuch, description } = formData;
 
   const onChange = (e) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -52,8 +52,7 @@ const EditLoad = ({
             <div className='card card-signin my-5'>
               <div className='card-body'>
                 <h5 className='card-title text-center'>
-                  <i className='far fa-calendar-plus'></i> Update a Load (Per
-                  Month)
+                  <i className='far fa-calendar-plus'></i> Modifier {label}
                 </h5>
                 <form className='form-signin' onSubmit={(e) => onSubmit(e)}>
                   <div className='form-label-group'>
@@ -66,7 +65,7 @@ const EditLoad = ({
                       value={howMuch}
                       onChange={(e) => onChange(e)}
                     />
-                    <label htmlFor='inputhowMuch'>How Much ?</label>
+                    <label htmlFor='inputhowMuch'>Montant</label>
                   </div>
 
                   <div className='form-label-group'>
@@ -86,7 +85,7 @@ const EditLoad = ({
                     className='btn btn-lg btn-info btn-block text-uppercase'
                     type='submit'
                   >
-                    Update
+                    Terminer
                   </button>
                 </form>
               </div>
