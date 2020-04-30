@@ -79,12 +79,12 @@ const docDashboard = () => {
           />
           <p className=' mt-3'>
             {' '}
-            A gauche vous avez un menu pour ajouter un mois, une charge ou
+            À gauche, vous avez un menu pour ajouter un mois, une charge ou
             consulter vos charges. Il vous permet aussi de supprimer
-            défintivement votre compte. <br />A droite vous une vue d'ensemble
-            de tout vos mois et vous permet de savoir où vous en êtes
-            financièrement. Direction sur la doc des mois pour en savoir plus
-            sur les données affichées.
+            définitivement votre compte.
+            <br /> À droite, vous une vue d'ensemble de tout vos mois et vous
+            permet de savoir où vous en êtes financièrement. Direction sur la
+            doc des mois pour en savoir plus sur les données affichées.
           </p>
         </div>
         <div
@@ -96,7 +96,7 @@ const docDashboard = () => {
           <h5 className='text-center'>Les Mois.</h5>
           <p className='text-center'>
             Pour commencer ajouter un mois en passant par le menu. Ce formulaire
-            ce présentera à vous.
+            se présentera à vous.
           </p>
           <img
             src={addmonth}
@@ -106,11 +106,11 @@ const docDashboard = () => {
           <p className='mt-3'>
             {' '}
             Remplissez le formulaire avec un mois (exemple: avril 2020),
-            ajoutez-y un solde sans revenus si vous commencez le mois avec 100€
-            mettez-y 100. Le revenus correspond à votre revenus que vous avez
-            gagné ce mois-ci (exemple: 1500€) et en extra ce sont vos revenus
+            ajoutez-y un solde sans revenus si vous commencez le mois avec 100 €
+            mettez-y 100. Le revenu correspond à votre revenu que vous avez
+            gagné ce mois-ci (exemple: 1500 €) et en extra, ce sont vos revenus
             exceptionnels si vous en avez (exemple: prime, vente, ...). Cliquez
-            sur ajouter et votre mois apparaît sur votre dashboard, excellent.
+            sur "ajouter" et votre mois apparaît sur votre dashboard, excellent.
           </p>
           <img
             src={month}
@@ -119,17 +119,17 @@ const docDashboard = () => {
           />
           <p className='mt-3'>
             De retour sur votre Dashboard avec un nouveau mois. Ce composant
-            vous permet d'avoir un visuel sur votre mois. D'abord on a les
+            vous permet d'avoir un visuel sur votre mois. D'abord, on a les
             dépenses, on aura ici la somme de vos dépenses pour ce mois. Votre
-            revenus qui est donc votre revenus saisis dans le formulaire ici
-            1500. Ensuite votre solde correspond à votre somme disponible
-            réellement c'est à dire qu'ici sera affiché : revenus + solde +
-            extra - dépenses - charges. Si vous avez mis 100 en solde dans le
-            formulaire et 1500 en revenus votre solde est de 1600 car il n'y pas
-            encore de dépenses ni de charges. Les extra sont donc les revenus
+            revenu qui est donc votre revenu saisis dans le formulaire ici 1500.
+            Ensuite votre solde correspond à votre somme disponible réellement
+            c'est-à-dire qu'ici sera affiché : revenus + solde + extra -
+            dépenses - charges. Si vous avez mis 100 en solde dans le formulaire
+            et 1500 en revenus votre solde est de 1600 car il n'y pas encore de
+            dépenses ni de charges. Les extras sont donc les revenus
             exceptionnels saisies dans le formulaire et les charges sont la
             sommes des charges pour ce mois et seulement ce mois. Quand vous
-            allez saisir une charge vous devrait insérer une date de début et
+            allez saisir une charge, vous devrez insérer une date de début et
             une date de fin, si le mois est dans cet intervalle la charge sera
             calculé dans ce mois.
           </p>
@@ -207,7 +207,26 @@ const docDashboard = () => {
           role='tabpanel'
           aria-labelledby='pills-exp-tab'
         >
-          exp
+          <h5 className='text-center'>Les Dépenses</h5>
+          <p className='text-center'>
+            Cliquez sur le bouton ajouter une dépense dans le mois concerné. Il
+            vous renvoi un formulaire, ajoutez un intitulé (exemple: Course), un
+            montant (exemple: 30) et une date (exemple: 01/04/2020).
+          </p>
+          <p className='text-center'>
+            {' '}
+            Une fois ajouté vous pouvez le consulter dans "Voir Dépenses".
+          </p>
+          <img
+            src={showexpenses}
+            className='card shadow w-75 mx-auto d-block mt-3'
+            alt='showexpenses'
+          />
+          <p className='text-center mt-4'>
+            Et voilà, par exemple ici il vous reste 1270 réellement pour tout ce
+            que vous voulez faire.{' '}
+            <i class='far fa-hand-peace fa-w-20 fa-2x '></i>
+          </p>
         </div>
       </div>
     </section>
