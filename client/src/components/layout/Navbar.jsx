@@ -44,7 +44,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
           <Link to='/' className='text-dark'>
             CashFlow
           </Link>
-          <Link to='/tutorial' className='text-secondary h5 ml-4'>
+          <Link to='/documentation' className='text-secondary h5 ml-4'>
             Documentation
           </Link>
         </div>
