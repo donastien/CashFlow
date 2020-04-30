@@ -26,6 +26,9 @@ const Landing = () => {
           >
             Login
           </Link>
+          <Link className='btn btn-secondary fontMontserrat ml-4' to='/demo'>
+            Tester avant de vous inscrire
+          </Link>
           <img
             src={dashboard}
             className='card shadow w-100 mt-3 mx-auto d-block'

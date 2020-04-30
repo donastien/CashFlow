@@ -14,6 +14,7 @@ import EditLoad from '../components/load-forms/EditLoad';
 import NotFound from '../components/layout/NotFound';
 import ForgotPassword from '../components/auth/ForgotPassword';
 import ResetPassword from '../components/auth/ResetPassword';
+import Demo from '../components/auth/Demo';
 
 const Routes = () => {
   return (
@@ -28,6 +29,7 @@ const Routes = () => {
           path='/reset_password/:reset_password_token'
           component={ResetPassword}
         />
+        <Route exact path='/demo' component={Demo} />
 
         <PrivateRoute exact path='/dashboard' component={Dashboard} />
         <PrivateRoute exact path='/add-month' component={AddMonth} />

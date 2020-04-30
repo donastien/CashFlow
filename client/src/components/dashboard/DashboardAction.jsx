@@ -19,7 +19,10 @@ const DashboardAction = ({ auth: { user }, deleteAccount }) => {
         />
       </div>
       <div className='text-center mt-3'>
-        Member since <Moment locale='fr' format='MMMM, DD YYYY'>{user && user.date}</Moment>
+        Member since{' '}
+        <Moment locale='fr' format='MMMM, DD YYYY'>
+          {user && user.date}
+        </Moment>
       </div>
       <hr />
 
@@ -35,12 +38,16 @@ const DashboardAction = ({ auth: { user }, deleteAccount }) => {
       <Link to='/load' className='btn btn-transparent rounded mt-2'>
         <i className='fas fa-redo'></i> Voir les Charges
       </Link>
-      <button
-        className='btn btn-danger rounded mt-3 ml-1'
-        onClick={() => deleteAccount()}
-      >
-        <i className='fas fa-trash'></i> Supprimer mon Compte
-      </button>
+      {user && user.name !== 'John Doe' ? (
+        <button
+          className='btn btn-danger rounded mt-3 ml-1'
+          onClick={() => deleteAccount()}
+        >
+          <i className='fas fa-trash'></i> Supprimer mon Compte
+        </button>
+      ) : (
+        ''
+      )}
     </div>
   );
 };
