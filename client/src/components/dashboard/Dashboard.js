@@ -35,7 +35,7 @@ const Dashboard = ({
                   mois y insérer des dépenses et voir comment fonctionne les
                   charges. <br />
                   Pour en savoir plus consulter{' '}
-                  <Link to='/tutorial'>la documentation.</Link>
+                  <Link to='/documentation'>la documentation.</Link>
                 </div>
               </div>
             </div>
