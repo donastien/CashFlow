@@ -6,6 +6,7 @@ import DashboardAction from './DashboardAction';
 import MonthItem from './MonthItem';
 import { getLoads } from '../../actions/load';
 import { getMonths } from '../../actions/dashboard';
+import { Link } from 'react-router-dom';
 
 const Dashboard = ({
   getMonths,
@@ -25,6 +26,22 @@ const Dashboard = ({
       ) : (
         <Fragment>
           <DashboardAction />
+          {user && user.name === 'John Doe' ? (
+            <div className='container text-dark mt-4'>
+              <div className='row justify-content-end'>
+                <div className='col-sm-10'>
+                  Bienvenue sur un compte démo. Ici vous pourrai tester toutes
+                  les fonctionnalités que vous offre l'application. Créer un
+                  mois y insérer des dépenses et voir comment fonctionne les
+                  charges. <br />
+                  Pour en savoir plus consulter{' '}
+                  <Link to='/tutorial'>la documentation.</Link>
+                </div>
+              </div>
+            </div>
+          ) : (
+            ''
+          )}
           <div>
             {months.length > 0 ? (
               months.map((month) => <MonthItem key={month._id} month={month} />)

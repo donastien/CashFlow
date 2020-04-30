@@ -26,8 +26,8 @@ const Landing = () => {
           >
             Login
           </Link>
-          <Link className='btn btn-secondary fontMontserrat ml-4' to='/demo'>
-            Tester avant de vous inscrire
+          <Link className='btn btn-dark fontMontserrat ml-4' to='/demo'>
+            Demo
           </Link>
           <img
             src={dashboard}

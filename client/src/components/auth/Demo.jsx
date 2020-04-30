@@ -32,7 +32,7 @@ const Demo = ({ login, isAuthenticated }) => {
             <div className='card card-signin my-5'>
               <div className='card-body'>
                 <h5 className='card-title text-center'>
-                  <i className='fas fa-user-astronaut'></i> Démo
+                  <i class='fas fa-user-graduate'></i> Démo
                 </h5>
                 <form className='form-signin' onSubmit={(e) => onSubmit(e)}>
                   <div className='form-label-group'>
@@ -43,7 +43,6 @@ const Demo = ({ login, isAuthenticated }) => {
                       placeholder='Email address'
                       name='email'
                       value={email}
-                      onChange={(e) => onChange(e)}
                       required
                     />
                     <label htmlFor='inputEmail'>jdoe@gmail.com</label>
@@ -57,7 +56,6 @@ const Demo = ({ login, isAuthenticated }) => {
                       placeholder='Password'
                       name='password'
                       value={password}
-                      onChange={(e) => onChange(e)}
                       minLength='8'
                     />
                     <label htmlFor='inputPassword'>Password</label>
@@ -71,12 +69,8 @@ const Demo = ({ login, isAuthenticated }) => {
                     DEMO
                   </button>
 
-                  <p className='text-center mt-2'>
-                    <Link to='/forgot_password'>Mot de passe perdu ?</Link>
-                  </p>
                   <p className='text-center'>
-                    Vous n'avez pas de compte?{' '}
-                    <Link to='/register'>S'enregistrer</Link>
+                    <Link to='/register'>Créer votre compte</Link>
                   </p>
                 </form>
               </div>

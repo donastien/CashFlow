@@ -45,7 +45,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
             CashFlow
           </Link>
           <Link to='/tutorial' className='text-secondary h5 ml-4'>
-            Comment ça fonctionne ?
+            Documentation
           </Link>
         </div>
       </div>
