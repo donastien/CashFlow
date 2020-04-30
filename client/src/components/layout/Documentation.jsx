@@ -6,6 +6,7 @@ import month from '../../img/month.png';
 import showload from '../../img/showload.png';
 import showexpenses from '../../img/showexpenses.png';
 import menuLoad from '../../img/menuLoad.png';
+import Footer from './Footer';
 
 const docDashboard = () => {
   return (
@@ -229,6 +230,7 @@ const docDashboard = () => {
           </p>
         </div>
       </div>
+      <Footer />
     </section>
   );
 };

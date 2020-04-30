@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import dashboard from '../../img/dashboard.png';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Footer from './Footer';
 
 const Landing = () => {
   AOS.init();
@@ -55,14 +56,7 @@ const Landing = () => {
           <h1 className='fontRoboto mt-5'>Soyez pro-actif.</h1>
         </div>
       </div>
-      <div className='footer'>
-        <p className='text-center'>
-          © 2020 Donastien Karoumbata{' '}
-          <a href='https://www.linkedin.com/in/dkaroumbata/'>LinkedIn</a>{' '}
-          <a href='https://github.com/donastien'>GitHub</a>{' '}
-          <a href='http://donastienkaroumbata.com'>donastienkaroumbata.com</a>
-        </p>
-      </div>
+      <Footer />
     </section>
   );
 };
