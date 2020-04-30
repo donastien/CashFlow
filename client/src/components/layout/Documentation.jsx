@@ -137,7 +137,7 @@ const docDashboard = () => {
             Vous avez aussi 4 boutons en bas, 2 aux extrémités permettant
             d'afficher une liste déroulante des dépenses ou des charges. Le
             deuxième pour ajouter une dépense et le troisième pour modifier le
-            mois soit pour modifier le revenus ou le solde éventuellement
+            mois soit pour modifier le revenu ou le solde ou éventuellement
             ajouter des extras.
           </p>
         </div>
@@ -150,11 +150,11 @@ const docDashboard = () => {
           <h5 className='text-center'>Les Charges</h5>
           <p className='text-center'>
             Les charges sont les dépenses qui se répètent chaque mois (exemple:
-            loyer, forfait,...).
+            loyer, forfait, ...).
           </p>
           <p>
-            Dans le menu nous avons deux boutons concernés par les charges. On a
-            d'abord le bouton pour ajouter une charge qui vous renverra un
+            Dans le menu, nous avons deux boutons concernés par les charges. On
+            a d'abord le bouton pour ajouter une charge qui vous renverra un
             formulaire et un autre bouton qui vous renverra une page avec la
             liste de toutes vos charges. Cette page vous permettra aussi de
             modifier ou de supprimer une charge.
@@ -166,8 +166,8 @@ const docDashboard = () => {
           />
           <h5 className='mt-5 text-center'>Maintenant ajoutons une charge.</h5>
           <p className='text-center'>
-            Cliquez sur le bouton ajouter une charge depuis le menu et vous vous
-            retrouverai devant ce formulaire.
+            Cliquez sur le bouton "ajouter une charge" depuis le menu et vous
+            vous retrouverai devant ce formulaire.
           </p>
           <img
             src={addload}
@@ -184,7 +184,7 @@ const docDashboard = () => {
             juin 2020). Dans ce cas-là, la charge sera soustraite de tous les
             mois entre cet intervalle y compris la date de fin.
             <br />
-            - Soit c'est une durée indéterminée et dans ce cas là vous cochez la
+            Soit c'est une durée indéterminée et dans ce cas là vous cochez la
             case "no end date". La charge sera donc déduite de tous les mois
             après la date de début compris.
             <br />
@@ -209,13 +209,13 @@ const docDashboard = () => {
         >
           <h5 className='text-center'>Les Dépenses</h5>
           <p className='text-center'>
-            Cliquez sur le bouton ajouter une dépense dans le mois concerné. Il
-            vous renvoi un formulaire, ajoutez un intitulé (exemple: Course), un
-            montant (exemple: 30) et une date (exemple: 01/04/2020).
+            Cliquez sur le bouton "ajouter une dépense" dans le mois concerné.
+            Il vous renvoi un formulaire, ajoutez un intitulé (exemple: Course),
+            un montant (exemple: 30) et une date (exemple: 01/04/2020).
           </p>
           <p className='text-center'>
             {' '}
-            Une fois ajouté vous pouvez le consulter dans "Voir Dépenses".
+            Une fois ajouté, vous pouvez le consulter dans "Voir Dépenses".
           </p>
           <img
             src={showexpenses}
@@ -223,8 +223,8 @@ const docDashboard = () => {
             alt='showexpenses'
           />
           <p className='text-center mt-4'>
-            Et voilà, par exemple ici il vous reste 1270 réellement pour tout ce
-            que vous voulez faire.{' '}
+            Et voilà, par exemple ici, il vous reste 1270 réellement pour tout
+            ce que vous voulez faire.
             <i class='far fa-hand-peace fa-w-20 fa-2x '></i>
           </p>
         </div>
