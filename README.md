@@ -32,7 +32,7 @@ Ensuite configurez un cluster et un user sur MongoDB. Créez un fichier default.
 }
 ```
 
-Ensuite pour lancer le serveur Express et React simultanément.
+Lancer le serveur Express et React simultanément.
 
 ```
 npm run dev
