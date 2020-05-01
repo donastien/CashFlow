@@ -1,4 +1,0 @@
-{
-  "mongoURI": "mongodb+srv://donastien:Gf9IZSNGYPmiIYyo@cluster0-iuuww.mongodb.net/test?retryWrites=true&w=majority",
-  "jwtSecret": "cashflowsecretjsonwebtoken"
-}
