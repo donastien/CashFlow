@@ -8,7 +8,7 @@ Télécharger ou cloner le projet sur votre machine locale.
 
 ### Prerequisites
 
-Il faut d'abord que vous ayez Node installé sur votre machine, rendez-vous sur ce lien vous installer Node.
+Il faut d'abord que vous ayez Node installé sur votre machine, rendez-vous sur ce lien pour l'installer.
 
 ```
 https://nodejs.org
